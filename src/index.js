@@ -7,10 +7,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import React from 'react';
 import ReactDomClient from 'react-dom/client';
-
 import ReactLibrary from 'react-library';
 
 import App from './components/App';
+
+console.log('/* @echo ENV */');
 
 ReactDomClient
 	.createRoot(document.getElementById('app'))
