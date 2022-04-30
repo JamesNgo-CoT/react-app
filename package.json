@@ -2,10 +2,11 @@
   "name": "react-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack",
-    "build-prod": "webpack --mode production"
+    "watch": "webpack watch",
+    "build4prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
