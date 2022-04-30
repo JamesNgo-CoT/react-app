@@ -8,8 +8,15 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import ReactDomClient from 'react-dom/client';
 
+import ReactLibrary from 'react-library';
+
 import App from './components/App';
 
 ReactDomClient
 	.createRoot(document.getElementById('app'))
-	.render(<App>Hello World</App>);
+	.render(
+		<>
+			<App>Hello World</App>
+			<ReactLibrary>Hello Universe</ReactLibrary>
+		</>
+	);
