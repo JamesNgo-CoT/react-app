@@ -21,26 +21,28 @@ module.exports = (env, { mode }) => {
 				{
 					test: /\.jsx?$/,
 					exclude: /node_modules/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							cacheDirectory: true,
-							cacheCompression: false,
-							envName: isProduction ? 'production' : 'development'
+					use: [
+						{
+							loader: 'babel-loader',
+							options: {
+								cacheDirectory: true,
+								cacheCompression: false,
+								envName: isProduction ? 'production' : 'development'
+							}
 						}
-					}
+					]
 				},
 				{
 					test: /\.css$/,
 					use: [
-						isProduction ? MiniCssExtractPlugin.loader: 'style-loader',
+						isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
 						'css-loader'
 					]
 				},
 				{
 					test: /\.s[ac]ss$/,
 					use: [
-						isProduction ? MiniCssExtractPlugin.loader: 'style-loader',
+						isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
 						{
 							loader: 'css-loader',
 							options: {
